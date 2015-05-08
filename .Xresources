@@ -1,0 +1,175 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! Base16 Atelier Forest
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
+
+#define base00 #1b1918
+#define base01 #2c2421
+#define base02 #68615e
+#define base03 #766e6b
+#define base04 #9c9491
+#define base05 #a8a19f
+#define base06 #e6e2e0
+#define base07 #f1efee
+#define base08 #f22c40
+#define base09 #df5320
+#define base0A #d5911a
+#define base0B #5ab738
+#define base0C #00ad9c
+#define base0D #407ee7
+#define base0E #6666ea
+#define base0F #c33ff3
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
+
+
+URxvt.depth: 32
+
+URxvt.transparent: true
+URxvt.shading: 20
+
+URxvt*background: [80]#1b1918
+URxvt*foreground: base05 
+URxvt*colorBD: base06
+URxvt*colorIT: base07
+URxvt*colorUL: base07
+
+! Fade the text by the given percentage when focus is lost; option -fade.
+URxvt*fading: 20
+URxvt*fadeColor: base03
+
+! Set the application icon pixmap; option -icon.
+! URxvt*iconFile: file
+
+! Use the specified colour for the scrollbar [default #B2B2B2].
+URxvt*scrollColor: base0D
+
+! Use the specified colour for the scrollbars trough area [default #969696]. Only relevant for rxvt (non
+URxvt*troughColor: base00
+
+! The colour of the border around the text area and between the scrollbar and the text.
+URxvt*borderColor: base00
+
+! Select the fonts to be used. This is a comma separated list of font names that are checked in order when
+! URxvt*font: fontlist
+! URxvt*boldFont: fontlist
+! URxvt*italicFont: fontlist
+! URxvt*boldItalicFont: fontlist
+
+! Set the name used to label the windows icon or displayed in an icon manager window, it also sets the
+! URxvt*iconName: string
+
+URxvt*urgentOnBell: true
+URxvt*visualBell: true
+
+URxvt*scrollstyle: plain
+
+! Set the scrollbar width in pixels.
+! URxvt*thickness: number
+
+! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar; option +sb.
+URxvt*scrollBar: true
+
+URxvt*scrollBar_right: true
+
+! True: display an rxvt scrollbar without a trough; option -st.  False: display an rxvt scrollbar with a
+! URxvt*scrollBar_floating: boolean
+
+! Align the top, bottom or centre [default] of the scrollbar thumb with the pointer on middle button
+! URxvt*scrollBar_align: mode
+
+URxvt*scrollTtyOutput: true
+
+! True: scroll with scrollback buffer when tty receives new lines (i.e.  try to show the same lines) and
+! URxvt*scrollWithBuffer: boolean
+
+URxvt*scrollTtyKeypress: true
+
+URxvt*saveLines: 65535
+
+! Internal border of number pixels. This resource is limited to 100; option -b.
+! URxvt*internalBorder: number
+
+! External border of number pixels. This resource is limited to 100; option -w, -bw, -borderwidth.
+! URxvt*externalBorder: number
+
+! Set MWM hints to request a borderless window, i.e. if honoured by the WM, the rxvt-unicode window will not
+! URxvt*borderLess: boolean
+
+! True: handle Meta (Alt) + keypress to set the 8th bit. False: handle Meta (Alt) + keypress as an escape
+! URxvt*meta8: boolean
+
+! True: the mouse wheel scrolls a page full. False: the mouse wheel scrolls five lines [default].
+! URxvt*mouseWheelScrollPage: boolean
+
+! True: blink the cursor. False: do not blink the cursor [default]; option -bc.
+! URxvt*cursorBlink: boolean
+
+! True: Make the cursor underlined. False: Make the cursor a box [default]; option -uc.
+! URxvt*cursorUnderline: boolean
+
+! True: blank the pointer when a key is pressed or after a set number of seconds of inactivity. False: the
+! URxvt*pointerBlank: boolean
+
+! Mouse pointer foreground colour.
+! URxvt*pointerColor: colour
+
+! Mouse pointer background colour.
+! URxvt*pointerColor2: colour
+
+! Specifies number of seconds before blanking the pointer [default 2]. Use a large number (e.g. 987654321) to
+! URxvt*pointerBlankDelay: number
+
+! Set the key to be interpreted as the Meta key to: alt, meta, hyper, super, mod1, mod2, mod3, mod4, mod5;
+! URxvt*modifier: modifier
+
+URxvt.perl-ext-common: default,matcher,tabbedex,vtwheel,clipboard
+
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+URxvt.tabbed.new-button: true
+URxvt.tabbed.autohide: true
+URXvt.tabbed.reopen-on-close: yes
+URxvt.keysym.Control-t: perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
+
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
